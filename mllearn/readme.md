@@ -1,8 +1,10 @@
 To test the code:
 1. Extract the zipfile
 2. create a virtual environment using conda and run the following command to install sklearn
-   `conda install -c conda-forge scikit-learn`
-   please note that python3.9 doesn't have a stable scikit-learn release for pip yet, so you must use conda
+   
+`conda install -c conda-forge scikit-learn`
+   
+please note that python3.9 doesn't have a stable scikit-learn release for pip yet, so you must use conda
 3. Go inside `hw1` directory
 4. run the following command for the assignment:
 
