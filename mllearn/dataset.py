@@ -44,6 +44,10 @@ class TextReader(object):
         """
         return self.documents, self.labels
 
+    def get_data(self):
+        """same as get_training_data"""
+        return self.get_training_data()
+
 
 class TextData(object):
     """
@@ -107,7 +111,8 @@ class TextData(object):
         for document in documents:
             row_vector = [0] * len(self.vocabulary)
             for word in self.tokenize(document):
-                row_vector[self.vocabulary[word]] = 1
+                if word in self.vocabulary:
+                    row_vector[self.vocabulary[word]] = 1
             feature_vector.append(row_vector)
         return feature_vector
 

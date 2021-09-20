@@ -3,6 +3,11 @@ from typing import List
 
 
 def validate_input(documents: List, labels: List):
+    if len(documents) == 0:
+        raise ValueError("Empty input for features!!")
+    if len(labels) == 0:
+        raise ValueError("Empty input for labels!!")
+
     assert len(documents) == len(
         labels), "count of documents is {} while are count of labels is {}".format(
         len(documents), len(labels))
