@@ -92,6 +92,8 @@ def print_accuracy(test_labels, predictions):
 
 
 if __name__ == "__main__":
+
+    # This is the data path used while running in my machine. please provide your data path
     folder = "/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw1"
     argparser = argparse.ArgumentParser(
         description="Train a spam classification model")
