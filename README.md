@@ -1,8 +1,2 @@
 # MLLearn
-Learning the basics of Machine Learning
-
-
-
-```python
-import pandas as pd
-```
+This repo contains course projects from my graduate Machine Learning course
