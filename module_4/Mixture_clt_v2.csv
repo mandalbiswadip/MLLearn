@@ -1,0 +1,4 @@
+,data,best_n_components,log_likelihood_mean,log_likelihood_standard_deviation
+0,bnetflix.ts.data,20,-56.84904754,0.043202928
+1,baudio.ts.data,20,-40.24376952,0.013356107
+2,nltcs.ts.data,20,-6.667768017,0.02489416

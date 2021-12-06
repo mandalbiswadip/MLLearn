@@ -1,0 +1,16 @@
+dataset,criterion,max_depth,max_features,n_estimators,accuracy,f1_score
+c1000_d100,entropy,5,log2,200,0.9849,0.9848
+c1000_d1000,entropy,5,log2,200,0.9930,0.9930
+c1000_d5000,entropy,,log2,200,0.9984,0.9984
+c1500_d100,gini,3,auto,100,0.9950,0.9949
+c1500_d1000,gini,3,log2,100,1.0000,1.0000
+c1500_d5000,gini,10,log2,100,1.0000,1.0000
+c1800_d100,gini,3,auto,50,1.0000,1.0000
+c1800_d1000,gini,3,auto,50,0.9995,0.9995
+c1800_d5000,gini,3,log2,100,1.0000,1.0000
+c300_d100,entropy,,auto,200,0.8543,0.8528
+c300_d1000,gini,5,log2,200,0.8879,0.8894
+c300_d5000,gini,10,sqrt,200,0.9189,0.9213
+c500_d100,entropy,3,auto,200,0.8844,0.8821
+c500_d1000,gini,5,log2,200,0.9550,0.9556
+c500_d5000,entropy,10,log2,200,0.9648,0.9653

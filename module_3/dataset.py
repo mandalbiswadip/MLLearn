@@ -25,9 +25,7 @@ class CNFDataset(object):
 
     def __str__(self):
         clauses, examples = get_clauses_examples_count(self.train_path)
-        return "Dataset with {} clauses and {} train examples".format(clauses,
-                                                                      examples)
+        return "c{}_d{}".format(clauses, examples)
 
     def __repr__(self):
-        clauses, examples = get_clauses_examples_count(self.train_path)
-        return "c{}_d{}".format(clauses, examples)
+        return self.__str__()

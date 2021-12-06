@@ -1,0 +1,4 @@
+tqdm==4.61.1
+numpy==1.21.0
+pandas==1.2.5
+scikit_learn==1.0

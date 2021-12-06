@@ -1,6 +1,7 @@
 import sys
 
 import numpy as np
+import pandas as pd
 from sklearn.ensemble import BaggingClassifier, RandomForestClassifier, \
     GradientBoostingClassifier
 from sklearn.metrics import f1_score
@@ -15,7 +16,7 @@ from config_param_choices import (bagging_classifier_parameter_choices,
                                    gradient_boosting_parameter_choices)
 
 
-def tune_model(model_interface, params, folder):
+def tune_model(model_interface, params, folder, name=""):
     """
     Args:
         model: mix of sklearn model
@@ -25,9 +26,13 @@ def tune_model(model_interface, params, folder):
             data folder path
 
     """
+    accuracy_logger = []
     for path in DataFileGenerator(folder):
 
+        acc_log = dict()
         dataset = CNFDataset(path)
+
+        acc_log["dataset"] = dataset
         print(dataset)
 
         # train and validation data
@@ -52,20 +57,29 @@ def tune_model(model_interface, params, folder):
 
         best_model = clf.best_estimator_
         best_params = best_model.get_params()
+        acc_log.update(best_params)
 
         print("Best parameters \n", best_params)
 
         final_model = model_interface(**best_params)
-        final_model.fit(features, target)
+        final_model.fit(X, y)
 
         test_features, test_target = dataset.get_test_data()
 
+        score = final_model.score(test_features, test_target)
+        acc_log["accuracy"] = score
         print("Accuracy on test set: {}".format(
-            final_model.score(test_features, test_target)))
+            score))
+
+        f1 = f1_score(test_target, final_model.predict(test_features))
+        acc_log["f1_score"] = f1
         print("F1 score on test set: {}".format(
-            f1_score(test_target, final_model.predict(test_features)))
+            f1)
         )
+        accuracy_logger.append(acc_log)
         print("-x" * 80)
+    print("\nSaving accuracy for {} in {}\n".format(name, name + ".csv"))
+    pd.DataFrame(accuracy_logger).to_csv(name + ".csv", index=False)
 
 
 if __name__ == "__main__":
@@ -78,7 +92,8 @@ if __name__ == "__main__":
     tune_model(
         model_interface=model,
         params=params,
-        folder=folder
+        folder=folder,
+        name="DecisionTreeClassifier"
     )
 
     # bagging
@@ -89,7 +104,8 @@ if __name__ == "__main__":
     tune_model(
         model_interface=model,
         params=params,
-        folder=folder
+        folder=folder,
+        name="BaggingClassifier"
     )
 
     # random forest
@@ -99,15 +115,17 @@ if __name__ == "__main__":
     tune_model(
         model_interface=model,
         params=params,
-        folder=folder
+        folder=folder,
+        name="RandomForestClassifier"
     )
 
     # gradient boosting
-    model = GradientBoostingClassifier
-    params = gradient_boosting_parameter_choices
-    print("GradientBoostingClassifier")
-    tune_model(
-        model_interface=model,
-        params=params,
-        folder=folder
-    )
+    # model = GradientBoostingClassifier
+    # params = gradient_boosting_parameter_choices
+    # print("GradientBoostingClassifier")
+    # tune_model(
+    #     model_interface=model,
+    #     params=params,
+    #     folder=folder,
+    #     name="GradientBoostingClassifier"
+    # )

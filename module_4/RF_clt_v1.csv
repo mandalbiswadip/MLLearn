@@ -1,0 +1,11 @@
+,data,best_n_components,best_r,log_likelihood_mean,log_likelihood_standard_deviation
+0,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/plants.ts.data,20,1000,-15.650904419150285,0.03346012735239325
+1,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/jester.ts.data,20,2000,-57.188856518925284,0.01845286598257476
+2,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/pumsb_star.ts.data,2,100,-30.82307911520305,0.025204634081941537
+3,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/tretail.ts.data,5,2000,-10.96433641934726,0.007234130813519273
+4,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/msnbc.ts.data,20,100,-6.5591292917871895,0.0060713418967022
+5,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/bnetflix.ts.data,20,2000,-59.592967857775854,0.016716655161264304
+6,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/baudio.ts.data,20,2000,-43.46765211342762,0.018219271278957838
+7,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/nltcs.ts.data,20,100,-6.618785038302528,0.014883514170250425
+8,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/kdd.ts.data,20,2000,-2.2208255756258355,0.0027669404991597004
+9,/Users/biswadipmandal/Documents/MSCS/Fall_21/CS_6375_ML/homeworks/hw4/dataset/accidents.ts.data,20,100,-33.221205153501195,0.0157603125016465
