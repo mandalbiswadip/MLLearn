@@ -15,7 +15,7 @@ This repo contains course projects from my graduate Machine Learning course
 
 
 ### module_4
-* Chow Liu for Tree Bayesian Network
+* Chow Liu Tree for Tree Bayesian Network
 * Mixture of Tree Bayesian Network(involves a latent variable)
 * Mixtures of Tree Bayesian networks using Random Forests
 
