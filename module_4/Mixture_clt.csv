@@ -1,7 +1,0 @@
-,data,best_n_components,log_likelihood_mean,log_likelihood_standard_deviation
-0,plants.ts.data,20,-13.36424591,0.032024876
-1,jester.ts.data,20,-53.11359036,0.037533961
-2,pumsb_star.ts.data,20,-23.90365291,0.083594797
-3,tretail.ts.data,2,-10.86843389,0.017330514
-4,msnbc.ts.data,20,-6.425636866,0.005140974
-5,bnetflix.ts.data,20,-56.84197715,0.034898991
